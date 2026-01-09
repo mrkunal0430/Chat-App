@@ -37,7 +37,7 @@ const Signup = () => {
       // We will skip file upload logic for now and just set default avatar on backend if not provided.
 
       const { data } = await axios.post(
-        "http://localhost:5001/api/auth",
+        `${import.meta.env.VITE_API_URL}/api/auth`,
         {
           name,
           email,

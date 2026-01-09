@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "*" })); // Allow all origins for simplicity in dev
+app.use(cors({ origin: process.env.FRONTEND_URL})); // Allow all origins for simplicity in dev
 
 const PORT = process.env.PORT || 5001;
 

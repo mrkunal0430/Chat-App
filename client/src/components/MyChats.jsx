@@ -16,7 +16,7 @@ const MyChats = ({ fetchAgain }) => {
       };
 
       const { data } = await axios.get(
-        "http://localhost:5001/api/chat",
+        `${import.meta.env.VITE_API_URL}/api/chat`,
         config
       );
       setChats(data);

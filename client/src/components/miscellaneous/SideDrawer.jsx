@@ -36,7 +36,7 @@ const SideDrawer = () => {
       };
 
       const { data } = await axios.get(
-        `http://localhost:5001/api/auth?search=${search}`,
+        `${import.meta.env.VITE_API_URL}/api/auth?search=${search}`,
         config
       );
 
@@ -59,7 +59,7 @@ const SideDrawer = () => {
       };
 
       const { data } = await axios.post(
-        `http://localhost:5001/api/chat`,
+        `${import.meta.env.VITE_API_URL}/api/chat`,
         { userId },
         config
       );
